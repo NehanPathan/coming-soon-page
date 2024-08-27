@@ -5,15 +5,31 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #000;
+    background: url('https://mrwallpaper.com/images/high/dark-night-eerie-forest-g1fqdb8xxs3b4jk6.webp') no-repeat center center fixed;
+    background-size: cover;
+    /* filter: blur(8px); Adjust blur intensity */
+    position: relative;
 }
 
+.overlay {
+    position: absolute; /* Ensure it covers the whole container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Example background */
+    z-index: 1; /* Make sure it’s behind other content */
+    pointer-events: none; /* Allow clicks to pass through */
+  }
+  
+
 .clock_content {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+     z-index: 2; /* Ensure it's above the overlay */
 }
 
 .clock_content h1 {
@@ -80,6 +96,36 @@
     transform: translateY(-7px);
     box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
 }
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #f5f5f5;
+  }
+  
+  .footer .flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .footer a {
+    color: #f5f5f5;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+  }
+  
+  .footer a:hover {
+    color: #ddd;
+  }
+  
+  .footer i {
+    font-size: 1.25rem; /* Adjust icon size */
+  }
+  
+  .footer p {
+    font-size: 0.875rem;
+  }
+  
 
 @media (min-width: 900px) {
     .clock_content h1 {
